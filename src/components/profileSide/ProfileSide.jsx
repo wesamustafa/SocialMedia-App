@@ -1,9 +1,10 @@
 import React from 'react'
+import LogoSearch from '../LogoSearch/LogoSearch'
 
 function ProfileSide() {
     return (
         <div className="ProfileSide">
-            ProfileSide
+            <LogoSearch />
         </div>
     )
 }
