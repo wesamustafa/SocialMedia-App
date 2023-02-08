@@ -46,3 +46,30 @@
 ::-webkit-scrollbar{
   display: none;
 }
+/* Form */
+.InfoForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; 
+}
+.InfoInput{
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1; 
+}
+.InfoForm>div{
+  display: flex;
+  gap: 1rem;
+  width: 90%;
+  height: 3rem;
+}
+.InfoButton{
+  width: 6rem;
+  height: 2rem;
+  align-self: flex-end;
+}
