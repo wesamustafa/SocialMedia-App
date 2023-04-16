@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './Auth.css'
 import Logo from '../../img/logo.png'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { logIn, signUp } from '../../actions/AuthAction'
 const Auth = () => {
+    const dispatch = useDispatch();
+    const loading = useSelector((state) => state.authReducer.loading)
     const [isSignUp, setIsSignUp] = useState(true)
-    const dispatch = useDispatch()
+    // console.log(loading);
     const [data, setData] = useState({
         firstname: "",
         lastname: "",
@@ -47,7 +49,7 @@ const Auth = () => {
             <div className="a-left">
                 <img src={Logo} alt="logo" />
                 <div className="WebName">
-                    <h1>WESSAM Media</h1>
+                    <h1>Twitter Misr</h1>
                     <h5>Explore the ideas throughout the world</h5>
                 </div>
             </div>
@@ -77,7 +79,7 @@ const Auth = () => {
                     <div>
                         <span style={{ fontSize: "14px", cursor: "pointer" }} onClick={() => { setIsSignUp((prev) => !prev); resetForm() }}>{isSignUp ? "Already have an account. Login!" : "Don't have an account? Sign Up"}</span>
                     </div>
-                    <button className="button InfoButton" type='submit'>{isSignUp ? "Signup" : "Log in"}</button>
+                    <button className="button InfoButton" type='submit' disabled={loading}>{loading ? "Loading..." : isSignUp ? "Signup" : "Log in"}</button>
                 </form>
             </div>
         </div>
