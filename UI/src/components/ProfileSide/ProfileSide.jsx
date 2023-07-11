@@ -7,7 +7,7 @@ function ProfileSide() {
     return (
         <div className="ProfileSide">
             <LogoSearch />
-            <ProfileCard />
+            <ProfileCard location="homepage" />
             <FollowersCard />
         </div>
     )
