@@ -18,7 +18,7 @@ const Post = ({ data }) => {
     return (
         <div className='Post'>
             {/* <img src={process.env.REACT_APP_PUBLIC_FOLDER + data.image} alt="post-image" /> */}
-            <img src={"images/" + data.image} alt="post-image" />
+            <img src={process.env.REACT_APP_PUBLIC_FOLDER + "/" + data.image} alt="post-image" />
             <div className="PostReact">
                 <img src={liked ? Heart : NotLike} alt="hear-img" style={{ cursor: "pointer" }} onClick={handleLike} />
                 <img src={Comment} alt="comment-img" />
