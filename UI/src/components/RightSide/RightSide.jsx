@@ -17,7 +17,9 @@ const RightSide = () => {
                 </Link>
                 <UilSetting />
                 <img src={Noti} alt="NOTIIcon" />
-                <img src={Comment} alt="CommentIcon" />
+                <Link to='../chat'>
+                    <img src={Comment} alt="CommentIcon" />
+                </Link>
             </div>
             <TrendCard />
             <button className="button r-button" onClick={() => setModelOpened(true)}>
