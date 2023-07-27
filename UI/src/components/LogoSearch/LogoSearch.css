@@ -1,17 +1,22 @@
 .LogoSearch{
     display: flex;
     gap: 0.75rem;
+    width: 100%;
 }
 .Search{
     display: flex;
     background-color: var(--inputColor);
     border-radius: 10px;
     padding: 5px;
+    width: 100%;
+
 }
 .Search > input{
     background-color: transparent;
     border: none;
     outline: none; 
+    width: 100%;
+
 }
 .s-icon{
     display: flex;

@@ -47,9 +47,9 @@ const Auth = () => {
         <div className="Auth">
             {/* left side */}
             <div className="a-left">
-                <img src={Logo} alt="logo" />
+                {/* <img src={Logo} alt="logo" /> */}
                 <div className="WebName">
-                    <h1>Twitter Misr</h1>
+                    <h1>Social Media App</h1>
                     <h5>Explore the ideas throughout the world</h5>
                 </div>
             </div>
@@ -65,7 +65,7 @@ const Auth = () => {
                         </div>
                     )}
                     <div>
-                        <input type="text" placeholder='Username' className='InfoInput' name='username' onChange={handleChange} value={data.username} />
+                        <input type="text" placeholder='Email' className='InfoInput' name='username' onChange={handleChange} value={data.username} />
                     </div>
                     <div>
                         <input type="password" placeholder='Password' className='InfoInput' name='password' onChange={handleChange} value={data.password} />
